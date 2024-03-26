@@ -54,6 +54,7 @@ dtm_train = create_dtm(it_train, bigram_vectorizer)
 dtm_test = create_dtm(it_test, bigram_vectorizer)
 
 #### Trying some Feature Hashing ##########
+library(glmnet)
 h_vectorizer = hash_vectorizer(hash_size = 2 ^ 14, ngram = c(1L, 2L))
 
 dtm_train = create_dtm(it_train, h_vectorizer)
